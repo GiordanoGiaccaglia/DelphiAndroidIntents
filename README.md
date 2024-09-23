@@ -1,11 +1,9 @@
-# Delphi Honeywell Scanner Demo Using Intents
+﻿# Delphi Honeywell Scanner Demo Using Intents
 
 ## General Overview
 
-This repository demonstrates sending and receiving Android Intents to a Honeywell CT-40
-barcode scanner. This version has been updated and tested on Android 9 but not yet tested
-with previous versions of Android. (The previous commit of this project has been verified
-to run on Android 8.1.0 and could be used if this version doesn't work.)
+This repository demonstrates sending and receiving Android Intents to a Honeywell CK65
+barcode scanner. This version has been updated and tested on Android 12.
 
 The method described can be easily adapted to enable intents to be sent to other
 Android applications.
@@ -18,7 +16,7 @@ steps:
 - Determine which applications can handle the type of intent you wish to send
 - For each application that can handle the type of intent, create a new intent and send it specifically to that application.
 
-Update: It appears that this logic may no longer be required for Android 9, and in fact
+Update: It appears that this logic may no longer be required for Android 9 and above, and in fact
 just doesn't work. Android documentation suggests that a package name is usually required
 when sending intents. For claiming and releasing the Honeywell scanner, the name of the
 package is 'com.intermec.datacollectionservice'. The code has been updated to reflect
@@ -45,6 +43,5 @@ To receive scans from a Honeywell Android scanner there's a couple of requiremen
 
 ## Delphi Project
 
-- The project targets Delphi 10.3 Update 3 and is based on an existing application. It will compile with prior releases but will need changes to the deployment options.
-- The project creates output files in C:\temp\HoneywellScanner\Android as my project files are located on a network share and FMX projects do not like this.
+- The project targets Delphi 12.x and is based on an existing application. It will compile with prior releases but will need changes to the deployment options.
 - To handle the receiving of intents, the project uses a component derived from https://github.com/barisatalay/delphi-android-broadcast-receiver-component
