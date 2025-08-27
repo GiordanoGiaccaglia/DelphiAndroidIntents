@@ -8,7 +8,7 @@ uses
   FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
   FMX.Controls.Presentation, FMX.Platform,
   Androidapi.JNI.GraphicsContentViewText,
-  BroadcastReceiver, FMX.ScrollBox, FMX.Memo;
+  BroadcastReceiver, FMX.ScrollBox, FMX.Memo, FMX.Memo.Types;
 
 type
   TformMain = class(TForm)
